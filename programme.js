@@ -18,8 +18,6 @@ function getComputerChoice() {
     }
 
 }
-//prints the computer's choice to the console.
-console.log(getComputerChoice());
 
 
 //This bit of code collects the players choice
@@ -27,8 +25,7 @@ function getPlayerChoice() {
    let playerChoice = prompt("Please enter your choice of rock, paper or scissors ");
    return playerChoice.toLowerCase();
 }
-//this calls the function to get player's choice
-getPlayerChoice();
+
 
 //Initialising score variables
 let playerScore = 0;
@@ -78,3 +75,12 @@ function playRound(getPlayerChoice, getComputerChoice) {
 
     }
 }
+
+//This bit of code runs the game for 3 rounds
+for (let i = 0; i < 3; i++) {
+    playRound(getPlayerChoice(), getComputerChoice());
+}
+
+//display scores.
+console.log("Your score: " + playerScore);
+console.log("Computer's score: " + computerScore);
