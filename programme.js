@@ -18,6 +18,14 @@ function getComputerChoice() {
     }
 
 }
-
 //prints the computer's choice to the console.
 console.log(getComputerChoice());
+
+
+//This bit of code collects the players choice
+function getPlayerChoice() {
+   let playerChoice = prompt("Please enter your choice of rock, paper or scissors ");
+   return playerChoice.toLowerCase();
+}
+//this calls the function to get player's choice
+getPlayerChoice();
